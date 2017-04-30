@@ -12,23 +12,21 @@ import matplotlib.animation as animation
 # Modules you will need
 import numpy as np
 import particle
-from molecule import Molecule
+
 # TODO: Implement this function
 def init_molecule():
     """Create Particles p1 and p2 inside boundaries and return a molecule
     connecting them"""
-    fluorineIntheWater = Molecule([0,1],[1,0],1,1,3,0.5)
-    return fluorineIntheWater
+
+    pass
+
 
 # TODO: Implement this function
 def time_step(dt, mol):
     """Sets new positions and velocities of the particles attached to mol"""
     
+    pass
 
-    mol.p1.vel += mol.get_force()/mol.p1.m*dt
-    mol.p2.vel += mol.get_force()/mol.p2.m*dt
-    mol.p1.pos = mol.p1.vel*dt + mol.p1.pos
-    mol.p2.pos = mol.p2.vel*dt + mol.p2.pos
 
 #############################################
 # The rest of the file is already implemented

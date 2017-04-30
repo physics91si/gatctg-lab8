@@ -1,0 +1,12 @@
+from particle import Particle
+class Molecule:
+    def __init__(self, pos1, pos2, mass1, mass2, k, L0):
+        self.k = k
+        self.L0 = L0
+        self.p1 = Particle(pos1, mass1)
+        self.p2 = Particle(pos2, mass2)
+
+    def get_displ1(self):
+        return (p1.pos - p2.pos)
+    def get_force(self):
+        return (self.k*get_displ_1(self)**2)
