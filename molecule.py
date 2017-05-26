@@ -12,4 +12,4 @@ class Molecule:
     def get_force(self):
         mag = np.linalg.norm(self.get_displ1())
         unit = self.get_displ1()/mag
-        return (unit*self.k*(mag-self.L0)**2)
+        return (unit*self.k*(mag-self.L0))

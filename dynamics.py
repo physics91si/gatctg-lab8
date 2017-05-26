@@ -25,7 +25,7 @@ def time_step(dt, mol):
     """Sets new positions and velocities of the particles attached to mol"""
     
 
-    mol.p1.vel += mol.get_force()/mol.p1.m*dt
+    mol.p1.vel -= mol.get_force()/mol.p1.m*dt
     mol.p2.vel += mol.get_force()/mol.p2.m*dt
     mol.p1.pos = mol.p1.vel*dt + mol.p1.pos
     mol.p2.pos = mol.p2.vel*dt + mol.p2.pos
@@ -48,7 +48,7 @@ def run_dynamics(n, dt, xlim=(0, 1), ylim=(0, 1)):
     plt.ylabel(r'$y$')
     plt.title('Dynamics simulation')
     dynamic_ani = animation.FuncAnimation(fig, update_anim, n,
-            fargs=(dt, mol,line), interval=50, blit=False)
+                                          fargs=(dt, mol,line), interval=50, blit=True)
     plt.show()
 
 def update_anim(i,dt, mol,line):
